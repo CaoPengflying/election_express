@@ -18,3 +18,8 @@ app.get('/tugouServer',function(req,res){
     //let params = url.parse(req.url,true).query;
     tugouServer.select(req,res);
 });
+
+app.get('/helloServer',function(req,res){
+    let helloServer = new HelloServer();
+    helloServer.hello(req,res);
+})
