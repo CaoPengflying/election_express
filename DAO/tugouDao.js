@@ -1,9 +1,9 @@
-let Pool = require('util/MysqlUtil.js');
+let Pool = require('../util/MysqlUtil.js');
 let pool = Pool.Pool;
 
 function tugouDao() {
   this.select = function(rank,callback){
-     let sql = 'select * from tg_provider limit '+rank;
+     let sql = 'select * from tb_student limit '+rank;
     pool.getConnection(function(err,connection){
         if(err){
           console.log("连接失败");
